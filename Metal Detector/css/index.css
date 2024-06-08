@@ -1,0 +1,273 @@
+/* Globale stiler */
+html,
+body {
+  color: white;
+  margin: 0px;
+}
+/* Custom/spesiallaget font */
+
+@font-face {
+  font-family: "MetalFont";
+  src: url("/Font/MetalGothicDemoVersionRegular-WyB9A.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Bakgrunnsbilde */
+
+.background {
+  position: fixed;
+  background-image: url("/media/wall/wallpaper23.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+/* Fonter og tekst*/
+h2,
+h3,
+p {
+  font-family: Futura, sans-serif;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: center;
+}
+h1 {
+  font-family: MetalFont, sans-serif;
+  font-size: 145px;
+  line-height: 0px;
+  font-weight: 500;
+  letter-spacing: 9px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 200;
+}
+
+p {
+  font-size: 22px;
+  line-height: 35px;
+  font-weight: 100;
+}
+/* Header */
+
+.header {
+  width: 100%;
+  height: 13vh;
+  color: white;
+  text-shadow: 0px 2px 8px black;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+}
+/* Link i header  */
+
+#link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Seksjon med hvert band */
+
+.introduction {
+  width: 65%;
+  margin: 0 auto;
+  height: 70%;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+/* Kort stiler */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+/*Bilde av band*/
+.imgBand {
+  width: 100%;
+  object-fit: cover;
+  height: 65vh;
+  transition: filter 0.4s ease-in-out;
+}
+
+.imgBand:hover {
+  cursor: pointer;
+}
+
+.b,
+.ph,
+.n {
+  transition: filter 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.b:hover,
+.ph:hover,
+.n:hover {
+  filter: saturate(100%) blur(2px);
+}
+
+.b {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  filter: saturate(0%);
+}
+
+.ph {
+  filter: saturate(0%);
+}
+
+.n {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  filter: saturate(0%);
+}
+
+.imgLink {
+  position: relative;
+}
+
+/*Tykkere tekst*/
+span {
+  font-weight: 600;
+}
+
+/*Tekst over bildene (Hover Text)*/
+.hovText {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  width: 70%;
+  max-width: 70%;
+  left: 17%;
+  top: 25vh;
+  text-shadow: 0px 0px 8px black;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.imgLink:hover .hovText {
+  opacity: 1;
+}
+
+.opacity {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+}
+
+/* Animasjon og overgang stiler*/
+.down {
+  transform: scale(0.57);
+  transition: 2s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+}
+
+/* Mobil */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+  }
+  .introduction {
+    width: 100%;
+    flex-direction: column;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 3vh;
+    margin-top: 15vh;
+  }
+
+  .imgBand {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .b,
+  .ph,
+  .n {
+    border-radius: 50px;
+    filter: blur(2px);
+  }
+  .hovText {
+    opacity: 1;
+    top: 15vh;
+  }
+  .header {
+    height: 10vh;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  h1 {
+    font-size: 100px;
+  }
+  .introduction {
+    width: 80%;
+  }
+  .cards {
+    flex-wrap: wrap;
+    gap: 3vh;
+    margin-top: 12vh;
+  }
+
+  .b,
+  .ph,
+  .n {
+    border-radius: 50px;
+    filter: blur(2px);
+  }
+  .hovText {
+    opacity: 1;
+  }
+}
+
+/* Mindre Mobil */
+@media only screen and (max-width: 390px) {
+  h1 {
+    font-size: 38px;
+  }
+  .imgBand {
+    width: 100%;
+    height: 35vh;
+  }
+  .hovText {
+    opacity: 1;
+    top: 10vh;
+  }
+
+  .header {
+    height: 6vh;
+  }
+}

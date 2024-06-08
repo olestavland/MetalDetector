@@ -1,0 +1,478 @@
+/* Globale stiler */
+body {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+/* Custom/spesiallaget font */
+
+@font-face {
+  font-family: "MetalFont";
+  src: url("/Font/MetalGothicDemoVersionRegular-WyB9A.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* Bakgrunnsbilde */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("/media/wall/wallpaper22.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  z-index: -99;
+}
+
+/* Fonter og tekst*/
+h2,
+h3,
+p {
+  font-family: Futura;
+  font-style: normal;
+}
+
+h1 {
+  font-family: MetalFont;
+  font-size: 70px;
+  line-height: 0px;
+  font-weight: 500;
+  letter-spacing: 9px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 30px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+/* Fjerne en liten linje jeg fikk når jeg la  socials knappene i <a> tags */
+a {
+  text-decoration: none;
+}
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  height: 80px;
+  text-align: center;
+  transition: background-color 0.8s;
+}
+
+/* Overskrift i header */
+
+#header-title {
+  margin: 0;
+  width: 100%;
+}
+/* Link i header title */
+
+#link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Nattmodus  */
+
+.darkmode {
+  position: absolute;
+  display: inline-block; /* For å kunne sette høyde og bredde*/
+  height: 4vh;
+  width: 4vh;
+  background-color: transparent;
+  color: white;
+  right: 13vh;
+  top: 2.7vh;
+  border-radius: 6px;
+  border: none;
+}
+/*Stil instillinger fra google fonts for ikoner */
+.material-symbols-outlined {
+  /*Kunne ikke få ikonet til å bli større med font settings til google fonts så bruker scale.*/
+  transform: scale(120%);
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+/* Nattmodus  */
+
+.darkmode:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+  transform: rotate(25deg);
+}
+
+/* Stil for meny knappen*/
+.dropbtn {
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 6.5vh;
+  top: -1vh;
+}
+
+/* Container for posisjonering av meny innholdet */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Innhold (Skjult til trykket på) */
+.dropdown-content {
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
+  right: 2vh;
+  display: none;
+  top: 100%;
+  margin-top: 4vh;
+}
+
+#droptext {
+  font-size: 18px;
+}
+
+/* Linker i dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 8px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Tydeligjøre hvilken link du er på */
+.dropdown-content a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+a:active {
+  color: grey;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+/* Content section styles */
+.content-header {
+  top: 14vh;
+  font-size: 90px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Blur seksjon */
+
+.blur {
+  width: 88%;
+  backdrop-filter: blur(35px);
+  box-shadow: 0px 0px 20px black;
+  padding-top: 8rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.153);
+}
+/* Container for alt innhold */
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Innhold i blur seksjon */
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* Introduserende innhold */
+
+.band-profile {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px;
+}
+/* Vinyl Bilde */
+
+.imgBand {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Introduserende innhold */
+
+.band-intro {
+  margin-top: 4rem;
+  flex: 1;
+  text-align: left;
+}
+
+.band-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1 1 200px;
+  margin-bottom: 4px; /* Space between rows */
+  text-align: left;
+  text-shadow: 0px 0px 5px #000000;
+}
+/* Hoved innhold  */
+
+.band-info {
+  margin-top: 15rem;
+  display: flex;
+  text-align: left;
+  width: 80%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Tekst */
+
+.band-article {
+  flex: 1;
+  text-shadow: 0px 0px 5px #000000;
+}
+
+/* Bilde container*/
+
+#articleArt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex: 1;
+  margin-top: 5rem;
+}
+/* Bilde */
+
+.articleImg {
+  max-width: 86%;
+  height: auto;
+  margin-bottom: 40px;
+  border-radius: 18px;
+}
+
+/* Review stil*/
+#bandReview {
+  text-decoration: none;
+  color: #f09433;
+}
+
+#bandReview:hover {
+  text-decoration: underline;
+  filter: brightness(140%);
+}
+/* Sosiale media og kontakt container, finnes ikke sider for alt dette */
+.socials {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  min-width: 15%;
+  height: 3vh;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-right: 1rem;
+  filter: grayscale(100%) brightness(80%);
+  font-family: Futura;
+  font-style: normal;
+}
+/* Stiler for diverse sosiale knapper */
+
+.spotify {
+  background-color: #1db954;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.facebook {
+  background-color: #4267b2;
+}
+
+.interview {
+  background-color: #b27a42;
+}
+
+.contact {
+  background-color: #9e62a9;
+}
+
+.socials:hover {
+  filter: brightness(125%);
+  box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Animasjon og overgang stiler*/
+
+.opacity {
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 0.85;
+}
+
+.down {
+  transform: scale(0.9);
+  transition: 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transition: 0.5s ease-in-out;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media queries for responsivt design */
+
+@media only screen and (max-width: 1260px) {
+  .header {
+    height: 70px;
+  }
+  #header-title {
+    font-size: 70px;
+  }
+  h2 {
+    font-size: 27px;
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 45px;
+    font-weight: 400;
+  }
+
+  .band-profile {
+    max-width: 900px;
+    flex-direction: column;
+  }
+  .darkmode {
+    right: 12vh;
+    top: 2.5vh;
+  }
+
+  .imgBand {
+    max-width: 800px;
+  }
+
+  .band-info {
+    margin-top: 27rem;
+    flex-direction: column;
+  }
+
+  .socials {
+    font-size: 15px;
+    min-width: 13%;
+    height: 3vh;
+    border-radius: 8px;
+  }
+
+  #articleArt {
+    align-items: center;
+  }
+
+  .dropdown-content {
+    /* Istedenfor background color fordi darkmode fjerner det */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .band-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgBand,
+  .band-intro {
+    width: 100%;
+    max-width: none;
+  }
+
+  h1,
+  h2,
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+
+  .content-header {
+    font-size: 60px;
+  }
+  #header-title {
+    font-size: 30px;
+  }
+  .darkmode {
+    right: 6vh;
+    top: 2vh;
+  }
+  .dropbtn {
+    position: static;
+  }
+
+  .dropdown-content {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    text-align: right;
+  }
+}

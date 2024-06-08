@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Meta tags for responsivt design og SEO ( Search Engine Optimalization )-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Highlights new metal music artists with band highlights. We dive into artists on our dedicated Metal Music Magazine.">
+  <meta name="author" content="Metal Detector Member">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Metal Music Magazine">
+  <meta property="og:description"
+    content="Explore the latest in metal music with artist highlights. Stay updated with our Metal Music Magazine.">
+  <meta property="og:url" content="metaldetector.com">
+  <meta property="og:site_name" content="Metal Music Magazine">
+
+  <!-- Linker - defer for å kjøre script etter html -->
+  <link href="../css/about.css" rel="stylesheet" />
+  <script defer src="../js/about.js"></script>
+
+  <!-- Google font stylesheet -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>About - Metal Detector</title>
+</head>
+<!--Bakgrunn-->
+
+<div class="background"></div>
+
+<body>
+  <!--Header-->
+  <header class="header">
+
+    <h1 id="header-title">
+      <a id="link" href="index.html">Metal Detector</a>
+    </h1>
+
+    <!-- Nattmodus for leselighet ( Google font ) -->
+    <button class="darkmode hidden"> <span class="material-symbols-outlined">
+        dark_mode
+      </span>
+
+    </button>
+    <!-- Dropdown Meny -->
+    <div class="dropdown hidden">
+      <button class="dropbtn">
+        <!--Burger menu svg-->
+
+        <svg xmlns="https://www.w3.org/TR/SVG2/" width="30" height="30" viewBox="0 0 30 30">
+          <title>Menu</title>
+          <path d="M0,5 30,5" stroke="#FFF" stroke-width="3" />
+          <path d="M0,14 30,14" stroke="#FFF" stroke-width="2" />
+          <path d="M0,23 30,23" stroke="#FFF" stroke-width="3" />
+        </svg>
+      </button>
+
+      <!-- Meny innhold  -->
+      <div class="dropdown-content">
+        <a id="droptext" href="index.html">Home</a>
+        <a id="droptext" href="besatt.html">Besatt</a>
+        <a id="droptext" href="pyrrhic.html">Pyrrhic</a>
+        <a id="droptext" href="nattehimmel.html">Nattehimmel</a>
+        <a id="droptext" href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Innhold  -->
+
+  <section id="container">
+    <h1 class="content-header hidden"></h1>
+
+    <div class="blur hidden">
+      <section class="content">
+
+        <!-- Introduserene innhold  -->
+
+        <div class="metal-profile">
+          <div class="cards hidden">
+            <img class="imgmetal" src="/Logo/logo2.svg" alt="Besatt Vinyl" />
+          </div>
+
+          <article class="metal-intro hidden">
+            <p id="metal-description"> <strong> Metal Detector is a minimalistic magazine dedicated solely to sharing
+                the up and coming musical wonders of the Metal Genre</strong></br>
+              New bands in particular are often not given a platform and we see it as a privilege to be able to share
+              the beauty of the blooming flowers hidden by a forest of trees with already deep roots and heights, hard
+              to look past.
+              It's as much the blooming flower as the foliating tree that makes the grand view a breathtaking one.
+              <br>
+              <hr> <br>
+              Check out our earlier highlights or follow us elsewhere to get the latest updates on new arrivals.
+
+
+            </p>
+
+            <!-- Knapper for sosiale medier, siden dette er et eksempel på noe som kan eksistere så er det ikke dedikerte sosiale medier laget og ikke noe arkiv på tidligere band  -->
+
+            <a href="">
+              <button class="socials archives">Archives</button>
+            </a>
+            <a href="">
+              <button class="socials instagram">
+                Instagram
+              </button>
+            </a>
+            <a href="">
+              <button class="socials facebook">
+                Facebook
+              </button>
+            </a>
+            <a href="mailto:nattehimmelofficial@gmail.com" target="_blank">
+              <button class="socials contact">
+                Contact
+              </button>
+            </a>
+
+
+
+          </article>
+
+        </div>
+        <!-- Hoved innhold  -->
+
+        <div class="metal-info">
+
+          <article class="metal-article">
+            <h1>Our Mission</h1>
+
+            <p class="hidden"> We in Metal Detector love to find and present new talent to build on the history of metal
+              as a whole. This time around we've taken the trip to Norway.
+              We want to highlight a select few bands that we feel showcases the genre, innovates with their style and
+              creativity, and of course bands we feel can inspire both old and new fans of this
+              undoubtedly classic genre. With great artist popping up all around the world it certainly seems to us that
+              we have a responsibility to help spread the infectious and raw emotion that metal is with the world
+              further.
+              Music has the ability to affect us collectively and inspire us to do great things and to connect with us
+              personally to understand ourselves better or to just let us release and be free.
+              Who are we to withold such an experience?
+            </p>
+
+          </article>
+
+      </section>
+    </div>
+  </section>
+  <!-- Footer  -->
+
+  <footer>
+    <p class="footer">&copy; 2023 Metal Detector. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
